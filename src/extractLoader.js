@@ -3,7 +3,7 @@ import path from "path";
 import {getOptions} from "loader-utils";
 import resolve from "resolve";
 import btoa from "btoa";
-import * as babel from "babel-core";
+import {transform} from "@babel/core";
 
 /**
  * @typedef {Object} LoaderContext
@@ -97,13 +97,13 @@ function evalDependencyGraph({loaderContext, src, filename, publicPath = ""}) {
         const rndPlaceholder = "__EXTRACT_LOADER_PLACEHOLDER__" + rndNumber() + rndNumber();
         const rndPlaceholderPattern = new RegExp(rndPlaceholder, "g");
 
-        src = babel.transform(src, {
+        src = transform(src, {
             babelrc: false,
             presets: [
                 [
-                    require("babel-preset-env"), {
+                    require("@babel/preset-env"), {
                         modules: "commonjs",
-                        targets: {nodejs: "current"},
+                        targets: {node: "current"},
                     },
                 ],
             ],

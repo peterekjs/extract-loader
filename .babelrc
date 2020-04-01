@@ -1,7 +1,7 @@
 {
     "presets": [
         [
-            "env",
+            "@babel/env",
             {
                 "targets": {
                     "node": 6
@@ -10,13 +10,15 @@
         ]
     ],
     "plugins": [
-        "transform-runtime"
+        "@babel/transform-runtime"
     ],
     "sourceMaps": true,
     "retainLines": true,
     "env": {
         "test": {
-            "plugins": ["istanbul"]
+            "plugins": [
+                "istanbul"
+            ]
         }
     }
 }

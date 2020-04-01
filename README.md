@@ -1,4 +1,4 @@
-extract-loader
+@peterek/extract-loader
 ==============
 **webpack loader to extract HTML and CSS from the bundle.**
 
@@ -7,6 +7,9 @@ extract-loader
 [![Dependency Status](https://david-dm.org/peerigon/extract-loader.svg)](https://david-dm.org/peerigon/extract-loader)
 [![Build Status](https://travis-ci.org/peerigon/extract-loader.svg?branch=master)](https://travis-ci.org/peerigon/extract-loader)
 [![Coverage Status](https://img.shields.io/coveralls/peerigon/extract-loader.svg)](https://coveralls.io/r/peerigon/extract-loader?branch=master)
+
+
+> This project was forked from [extract-loader](https://github.com/peerigon/extract-loader) with motivation to depend on current [@babel/core](https://github.com/babel/babel/tree/master/packages/babel-core) version.
 
 The extract-loader evaluates the given source code on the fly and returns the result as string. Its main use-case is to resolve urls within HTML and CSS coming from their respective loaders. Use the [file-loader](https://github.com/webpack/file-loader) to emit the extract-loader's result as separate file.
 
@@ -23,7 +26,7 @@ Installation
 ------------------------------------------------------------------------
 
 ```bash
-$ npm install extract-loader --save-dev
+$ npm install @peterek/extract-loader --save-dev
 ```
 
 <br>

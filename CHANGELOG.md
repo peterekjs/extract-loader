@@ -1,58 +1,34 @@
-## [5.0.1](https://github.com/peerigon/extract-loader/compare/v5.0.0...v5.0.1) (2020-03-06)
-
-
-### Bug Fixes
-
-* Add missing Babel dependency ([#76](https://github.com/peerigon/extract-loader/issues/76)) ([72ff48d](https://github.com/peerigon/extract-loader/commit/72ff48d))
-
-# [5.0.0](https://github.com/peerigon/extract-loader/compare/v4.0.3...v5.0.0) (2020-03-05)
-
-
-### Features
-
-* Add support for ECMAScript modules ([#69](https://github.com/peerigon/extract-loader/issues/69)) ([6034f23](https://github.com/peerigon/extract-loader/commit/6034f23))
-
-
-### BREAKING CHANGES
-
-* The extract-loader now uses Babel to transpile the bundle code for the current Node version. This is required in order to support the new file-loader which produces ECMAScript modules. This *should not* be a breaking change but since Babel is also known to be kind of brittle in regards of configuration we cannot guarantee that there might be unknown/unwanted side-effects in your project setup.
-
-## [4.0.3](https://github.com/peerigon/extract-loader/compare/v4.0.2...v4.0.3) (2020-01-29)
-
-
-### Bug Fixes
-
-* explicit build before release since prePublishOnly does not run ([83299e9](https://github.com/peerigon/extract-loader/commit/83299e9))
-
-## [4.0.2](https://github.com/peerigon/extract-loader/compare/v4.0.1...v4.0.2) (2020-01-29)
-
-
-### Bug Fixes
-
-* adjust release action to fix build step ([9216425](https://github.com/peerigon/extract-loader/commit/9216425))
-
-## [4.0.1](https://github.com/peerigon/extract-loader/compare/v4.0.0...v4.0.1) (2020-01-28)
-
-
-### Bug Fixes
-
-* handling resource paths with query parameters ([b4b2c0a](https://github.com/peerigon/extract-loader/commit/b4b2c0a))
-
-# [4.0.0](https://github.com/peerigon/extract-loader/compare/v3.1.0...v4.0.0) (2020-01-27)
-
-
-### chore
-
-* remove node v6 support ([3938c75](https://github.com/peerigon/extract-loader/commit/3938c75))
-
-
-### BREAKING CHANGES
-
-* remove node v6 support
-
 # Change Log
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="6.0.0"></a>
+# [6.0.0](https://github.com/peerigon/extract-loader/compare/v5.0.1...v6.0.0) (2020-04-01)
+
+
+### Bug Fixes
+
+* Set current version ([1a37f58](https://github.com/peerigon/extract-loader/commit/1a37f58))
+
+
+### Chores
+
+* Update babel packages to current versions ([39f05f6](https://github.com/peerigon/extract-loader/commit/39f05f6))
+
+
+### BREAKING CHANGES
+
+* Updated babel packages
+- babel-cli -> @babel/cli@7.8.4
+- babel-plugin-transform-runtime -> @babel/plugin-transform-runtime@7.9.0
+- babel-register -> @babel/register@7.9.0
+- babel-core ->@babel/core@7.9.0
+- babel-preset-env -> @babel/preset-env@7.9.0
+- babel-runtime -> @babel/runtime@7.9.2
+
+Align minimal node version with @babel/core (>=6.9.0)
+
+
 
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/peerigon/extract-loader/compare/v3.0.0...v3.1.0) (2018-11-26)
